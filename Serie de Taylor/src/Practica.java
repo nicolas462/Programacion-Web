@@ -17,9 +17,37 @@ public class Practica
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter (System.out));
 			BufferedReader br = new BufferedReader(new InputStreamReader (System.in));
 		
-			int n;
-			//n= Integer.parseInt(br.readLine());
-			bw.write("Hola: "+ euler(2,3));
+			int opcion = 0;
+			do
+			{
+				bw.write("Digite la opción deseada: ");
+				bw.write("\n\t1. Función e^x. \n\t2. Función seno(x) \n\t3. Función coseno(x). \n\t4. Salir.\n");
+				bw.flush();
+				opcion = Integer.parseInt(br.readLine());
+				
+				switch (opcion) 
+				{
+					case 1:
+						bw.write("Ingrese 'x' y luego 'n': \n");
+						bw.flush();
+						bw.write(euler(Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()))+"\n");
+					break;
+					case 2:
+						bw.write("Ingrese 'x' y luego 'n': \n");
+						bw.flush();
+						bw.write(seno(Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()))+"\n");
+					break;
+					case 3:
+						bw.write("Ingrese 'x' y luego 'n': \n");
+						bw.flush();
+						bw.write(coseno(Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()))+"\n");
+					break;
+					
+					default: bw.write("Digite una opción correcta.\n"); bw.flush(); break;
+				}
+						
+				
+			} while (opcion != 4);
 			
 			bw.flush();
 			bw.close();
