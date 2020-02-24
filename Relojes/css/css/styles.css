@@ -87,8 +87,10 @@ img{
 }
 
 .footer{
-    margin-top: 13%;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1%;
     /*display: flex;*/
 }
 
