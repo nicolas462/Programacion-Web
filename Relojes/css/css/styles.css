@@ -1,0 +1,16 @@
+body{
+    background-color: beige;
+}
+
+h2{
+    text-align: center;
+    border: 1px solid black;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+hr{
+    border: 1px solid lightgray;
+    margin-left: 36%;
+    margin-right: 36%;
+}
