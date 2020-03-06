@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h2>Ingrese la cantidad de números que desea generar aletoriamente</h2>
+    <input id="num" type="text" style="display: block">
+    <button onclick="generar();" style="margin: 10px;">Generar</button>
+    <p id="parrafo"></p>
+    <br>
+    <script>   /* CODIGO DE JAVA SCRIPT DENTRO DE HTML */
+        function generar()
+        {
+            List = [];            
+            for (i = 0; i < document.getElementById("num").value; i++)
+                List.push(Math.floor(Math.random() * 100) + 1);
+
+            document.getElementById("parrafo").innerHTML = "El arreglo generado es: " + List;
+            document.getElementById("botonOrdenar").innerHTML = "Ordenar";
+        }
+    </script>
+    <button id="botonOrdenar" onclick="bubbleSort(List);"></button>
+    <p id="ordenado"></p>
+    <input type="text" id="numeroBuscar">
+    <br>
+    <button id="botonBuscar"></button>
+    <p id="busqueda"></p>
+
+    <script src="js/script.js"></script> <!-- ENLACE PARA USAR JAVASCRIPT EN OTRO ARCHIVO -->
+</body>
+</html>
