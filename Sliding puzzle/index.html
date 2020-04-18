@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sliding puzzle</title>
+</head>
+<body>
+    
+    <!-- Imágenes disponibles superiores -->
+    <div class="parentDiv container">
+        <div class="navImage">
+            <img src="images/1.jpg" onclick="p.changeImage(1)">
+        </div>
+        <div class="navImage">
+            <img src="images/2.jpg" onclick="p.changeImage(2)">
+        </div>
+        <div class="navImage">
+            <img src="images/3.jpg" onclick="p.changeImage(3)">
+        </div>
+    </div>
+    <!-- Rompecabezas -->
+    <div  class="parentDiv container">
+        <!--Reemplaza <table>, <tr> y <td>-->
+        <div id="puzzleSize" clas="childDiv">
+            <h2 id="titlePuzzleSize" class="titlePuzzleSize">Tamaño rompecabezas</h2>
+            <center>
+                <select id="reSetRows">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <select id="reSetColumns">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <h3 id="reSetSize" onclick="p.reSetValues()">Aplicar</h3>
+            </center>
+        </div>
+        <div id="table" class="table childDiv"></div>
+        <div id="reference" clas="childDiv">
+        </div>
+    </div>
+    <!-- Cronómetro y botón juego nuevo -->
+    <div id="chronometer" class="parentDiv">
+        <button id="buttonChronometer" class="buttonChronometer"><span id="hours">00:</span><span id="minutes">00:</span><span id="seconds">00:</span><span id="miliseconds">000</span></button>
+    </div>
+    <div class="parentDiv">
+        <button id="btnNewGame" class="button" onclick="p.newGame()">Empezar juego</button>
+    </div>
+
+    <script src="js/script.js"></script>
+    
+    <!-- Fuentes: https://www.101computing.net/sliding-puzzle/ -->
+</body>
+</html>
